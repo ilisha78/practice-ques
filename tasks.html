@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+<h1>
+    hello world
+</h1>
+<p>
+
+    1. **Overview of JavaScript:**
+    - What is JavaScript, and why is it used in web development?
+    - Explain the key differences between JavaScript and Java.
+    - Explain the difference between `==` and `===
+    
+    7. **Variable Scope:**
+    - Explain the concept of variable scope in JavaScript.
+    - Write a function that declares a variable inside it. Can you access that variable outside the function?
+    
+    11. **Functions:**
+        - Create an anonymous function and assign it to a variable called `multiply`. Use it to multiply two numbers.
+    
+    15. **Control Flow:**
+        - Demonstrate the concept of control flow using nested loops.
+    
+
+</p>
+
+
+<script>
+
+    // let sum = 0;
+    // let n= prompt("enter a no.")
+    // n= Number.parseInt(n)
+    // for (let i=0 ; i<n; i++){
+    //     sum += (i+1)
+    // }
+    // console.log(sum)
+//chatgpt que
+let name= 'john';
+let age= 25;
+age=30
+console.log(age)
+let arr= ['john', 25, null, true]
+console.log(arr)
+let a= 20;
+let b= a;
+console.log(b)
+let c = 15%4
+console.log(c)
+// let d= prompt("enter today's temp.?")
+let d = 20
+if(d>30){
+    console.log("its hot")
+}
+
+let question = "- Implement a `switch` statement to handle different cases for days of the week."
+let weekdays= "friday";
+switch (weekdays){
+case "sunday" : 
+console.log("sunday"); break;
+
+case "monday": 
+console.log("monday"); break;
+
+case "tuesday":
+console.log("tuesday"); break;
+
+case "wednesday" : 
+console.log("wednesday"); break;
+
+case "thursday" : 
+console.log("thursday"); break;
+
+case "friday" : 
+console.log("friday"); break;
+
+case "saturday" : 
+console.log("saturday"); break;
+
+default: console.log("no days here");
+}
+let zee= "- Write a `for` loop to iterate from 1 to 5 and log each iteration to the console."
+for (i=0; i<5; i++){
+    console.log(i+1)
+}
+let jee="- Implement a `while` loop that prints numbers from 5 to 1."
+
+
+
+
+
+// sec phase ques goes here........i- function ques
+//gpt que 1
+let que= "1. Write a function named `greet` that takes a name as a parameter and returns a greeting message."
+function greet(name){
+    return "good morning "+ name
+}
+// greet("ilisha")
+console.log(greet("ilisha"))
+
+let que1=(name)=>{
+    return "good afternoon "+name
+}
+console.log(que1("mahi"))
+
+//gpt que 2
+let que2= "2. Create a function called `isEven` that takes a number as an argument and returns `true` if it's even and `false` if it's odd."
+function isEven (number){
+    return (number%2) == 0
+}
+console.log(isEven(12))
+
+//gpt que 3
+let que3= "3. Define a function `calculateArea` that calculates the area of a rectangle given its length and width."
+//arrow function
+let calculateArea=(lenght, width)=>{
+    return lenght*width
+}
+console.log(calculateArea(20,46))
+
+//gpt que 4
+let que4= "4. Implement a function `sumArray` that takes an array of numbers and returns the sum of all elements."
+function sumArray(a,b,c,d,e){
+    let z= a+b+c+d+e
+    return z
+}
+let arr2= sumArray(45,56,7,8,92,4,5,67,7,37)
+console.log(arr2)
+
+//gpt que 5 
+// let que5= "5. Write a function `reverseString` that reverses a given string."
+// let str= "i am a string"
+// console.log(str.method)
+
+//gpr que 7---array
+let que7="7. Define a function `findMax` that takes an array of numbers and returns the largest number."
+
+// gpt que 8
+let que8= "8. Implement a function `capitalize` that capitalizes the first letter of a given string."
+let string = "this is a string"
+
+function capitalize() {
+let b= string.toLocaleUpperCase()
+// return b
+// another way to sol this que correctly
+
+let c= string.slice(0,1)
+let d= c.toLocaleUpperCase()
+let e= string.slice(1)
+let f= d+e
+return f
+}
+console.log(capitalize())
+
+
+
+//loop que goes here
+//gpt que 9
+
+let que9= "9. Write a loop to print numbers from 1 to 10."
+for(i=0; i<10; i++){
+    console.log(i+1)
+}
+
+//gpt que 10
+let que10 = "10. Create a loop that prints even numbers from 1 to 20."
+for (i=1; i<=20; i++){
+    if(i%2==0){
+        console.log("even", i)
+    }
+    // else{
+    //     console.log("odd",i)
+    // }
+}
+
+
+//gpt que11
+let que11 = "11. Write a loop to calculate the factorial of a given number."
+let givenNo = 30
+
+//gpt que 12
+let que12="12. Implement a loop to iterate through an array and log each element to the console."
+let array=[1,2,3,4,5,6,7,8]
+for(let key in array){
+    console.log(array[key])
+}
+
+//gpt que 13
+let que13= "13. Create a loop to print the Fibonacci sequence up to a certain limit."
+let sum= 0
+for (let i=0; i<10; i++){
+    sum+=i
+    console.log(sum,"+",i)
+}
+
+
+// gpt que 14
+let que14= "14. Write a loop to find the sum of all elements in an array."
+let array2= [2,4,5,6,7,8,9]
+
+
+
+
+//statement que goes here
+// gpt que 15
+let que15= "15. Write an if-else statement to check if a number is positive, negative, or zero."
+let no = 990
+if(no<0){
+    console.log("this is negative")
+}
+else if(no>0){
+    console.log("this is positive")
+}
+else{
+    console.log("this is zero")
+}
+
+// gpt que 16
+let que16="16. Implement an if-else statement to determine whether a person is eligible to vote based on their age."
+let age2= 19
+if(age2 > 21){
+    console.log("you are eligible to vote")
+}
+else{console.log("you are not eligible to vote")}
+
+//gpt que 17
+let que17= "17. Write a program to check if a given year is a leap year."
+let year= 2024;
+if(year%4==0){
+    console.log("this is a leap year")
+}
+
+//gpt que 18
+let que18= "18. Implement an if-else statement to determine the grade of a student based on their marks."
+let marks= 70
+if(marks>=90){
+    console.log("Grade A+")
+}
+else if(marks>=60 && marks<90){
+    console.log("Grade B+")
+}
+else if(marks>=33 && marks<60){
+    console.log("Grade C+")
+}
+else{
+    console.log("Fail")
+}
+
+//gpt que 19
+let que19="19. Write an if-else statement to determine the type of a triangle based on its angles."
+let angle1 = 30
+let angle2 =80
+let angle3 =70
+if(angle1==angle2==angle3==60){
+    console.log("equilateral triangle")
+}
+else if(angle1>90 || angle2>90 || angle3>90){
+    console.log("obtuse angle triangle")
+}
+else if(angle1==90 || angle2==90 || angle3==90){
+    console.log("right angled triangle")
+}
+else{
+    console.log("acute angle triangle")
+}
+
+let ques1="Write a function `reverseString` that reverses a given string."
+function reversefunc(){
+    return   ques1.split("").reverse().join("")
+}
+console.log(reversefunc())
+
+
+let ques2="6. Create a function `checkPalindrome` that checks if a given string is a palindrome."
+function checkPalindrome(str){
+
+let rev= str.split("").reverse().join("")
+// console.log(a)
+if(str==rev){
+    console.log(true)
+}
+else{
+    console.log(false) 
+}
+}
+checkPalindrome("nitin")
+checkPalindrome("jahaj")
+checkPalindrome("rabbar")
+
+// let no= 123456;
+// let str= no.toString();
+// // let a= str.split("").reverse().join("")
+// // console.log(a)
+// let lgt= str.length-2;
+// // console.log(lgt)
+// for(let i=lgt; i>=0; i--){
+//     var add;
+//     add+=str[i]
+//     // console.log(str[i])
+// }
+// console.log(add)
+
+let ques3="7. Define a function `findMax` that takes an array of numbers and returns the largest number."
+let newAr=[1,23,4,5,67,23,34,778,1]
+function findMax(){
+    return Math.max(...newAr)
+}
+console.log(findMax())
+
+let ques4="13. Create a loop to print the Fibonacci sequence up to a certain limit."
+let addNo=0;
+for(let i=0; i<10; i++){
+    addNo+=i
+    console.log(addNo)
+}
+
+let ques5="11. Write a loop to calculate the factorial of a given number."
+let product=1;
+for(let i=1; i<=5; i++){
+    product*=i
+}    
+console.log(product)
+
+
+let ques6="20. Create a program that checks if a given number is prime or not using if-else statements."
+function prime(num){
+for (let i=2; i<num; i++){
+    if (num%i ==0){
+        return "not prime"
+    }
+}
+return "prime"
+}
+console.log(prime(21))
+
+
+
+//we can use return key word in if else statement and loops as well
+// function isPositive(num) {
+//     if (num > 0) {
+//         return true; // If num is positive, return true and exit the function
+//     } else {
+//         return false; // If num is not positive, return false and exit the function
+//     }
+// }
+
+// console.log(isPositive(5)); // This will output: true
+// console.log(isPositive(-3)); // This will output: false
+
+
+let ques7="- Implement a `while` loop that prints numbers from 5 to 1."
+let z=5;
+while(z>0){
+    console.log(z);
+    z--;
+}
+
+let ques8="- Combine multiple conditions using logical operators (AND, OR) in an `if` statement."
+let u=30;
+if(u>18 && u<40 || u==21 || u==25){
+    console.log("you r grown enough to handle your life,get married, or to fo job , to drive , to go to trip, or whatever you want")
+}
+
+let ques9="- Write an `else if` statement to categorize a person's age into different groups (child, teenager, adult)."
+let yourAge= 35;
+if(yourAge>0 && yourAge<=14){
+    console.log("child")
+}
+else if(yourAge>15 && yourAge<=24){
+    console.log("teenage")
+}
+else if(yourAge>25 && yourAge<34){
+    console.log("adult")
+}
+else{
+    console.log("senior citizen")
+}
+let fruits= ["apple", "banana", "orange"]
+console.log(fruits)
+fruits[3]="grapes"
+console.log(fruits)
+
+let ques10="- Declare an object representing a car with properties like `make`, `model`, and `year`.    - Access and log the value of the `model` property from the car object."
+let car={
+    make:"hundai",
+    model: "xcent",
+    year: 2010
+}
+console.log(car)
+console.log(car.model)
+
+function addFunc(a,b){
+return a+b
+}
+console.log(addFunc(2,67))
+
+let firstName="ilisha"
+let lastName="jaiswal"
+let fullName= firstName+lastName
+console.log(fullName)
+
+let str="you r grown enough to handle your life,get married, or to fo job , to drive , to go to trip, or whatever you want"
+let subsr= str.substring(2,38)//(2- starting index, 38 -ending index)
+console.log(subsr)
+
+let yourQue="Use logical operators to check if a number is between 10 and 20."
+let yourNo=12;
+if(yourNo>10 && yourNo <20){
+    console.log("true")
+}
+
+let yourQue1="Combine logical operators to check if a person is eligible for a discount (age above 60 and membership status)."
+let Age= 65;
+let membership= true;
+if(Age>60 && membership == true){
+    console.log("true")
+}
+
+let yourQue2="Use the ternary operator to check if a number is even or odd."
+let v=21;
+v %2==0? console.log("even"):console.log("odd")
+
+let yourQue3="Implement a ternary operator to determine if a person is a student or not based on a boolean variable."
+let person="student"
+person=="student"? console.log("true"):console.log("false")
+
+let isStudent=true;
+isStudent==true? console.log("true"):console.log("false")
+
+
+
+
+</script>
+</body>
+</html>

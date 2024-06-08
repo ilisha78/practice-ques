@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        12. Write JavaScript to dynamically change the src attribute of an image when hovering over a link. <br>
+
+<!-- 8. **Question:** Write a function to change the `src` attribute of an `<img>` element.
+```html
+<img id="myImage" src="oldImage.jpg">
+``` -->
+
+11. Implement a dropdown menu that appears when a button is clicked and disappears when clicking outside of it. 
+    </p>
+
+    <div class="dropdown">
+        <button id="showbtn">dropdown</button>
+    <ul class="ul">
+        <li>hlo</li>
+        <li>hello</li>
+        <li>halo</li>
+        <li>helo</li>
+        <li>hiii</li>
+    </ul>
+    </div>
+    
+    <!-- <a href="https://google.com">https://google.com</a> -->
+    <div id="img">
+        https://png.pngtree.com/png-vector/20191126/ourmid/pngtree-image-of-cute-radish-vector-or-color-illustration-png-image_2040180.jpg
+    </div>
+
+
+    <script>
+
+let sol11= document.getElementsByClassName("ul")[0];
+let btn= document.getElementById("showbtn");
+btn.addEventListener("click", function show(){
+    sol11.classList.add("show");
+});
+
+window.addEventListener("click", function(event){
+    if(!sol11.contains(event.target)){
+        sol11.classList.remove("show")
+    }
+});
+
+
+//doubt
+// function primeNo(n){
+//     if(n<=1){
+//         return false
+//     }
+//     for(let i=2; i*i<=n; i++){
+//         if(n%i === 0){
+//             return false
+//         }
+//         return true
+//     }
+
+// }
+// console.log(primeNo(23))
+    </script>
+</body>
+</html>

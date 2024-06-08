@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+div h2{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+}
+.color{
+    background-color: yellow;
+}
+
+.toggle{
+    background-color: pink;
+}
+#sol4{
+border-radius: 50%;
+width: 100px;
+height: 100px;
+/* background-color: skyblue; */
+text-align: center;
+align-content: center;
+}
+#sol19{
+    height: 1000px;
+}
+#image{
+    width: 1000px;
+    height: 1000px;
+}
+.ul, .bgcolor{
+    display: none;
+}
+.show{
+    display: block;
+}
+.dark{
+color: blue;
+background-color: white;
+width: 100px;
+height: 100px;
+}
+.body{
+    background-color: rgb(62, 60, 60);
+}
+.highlight{
+    background-color: yellow;
+}
+
+
+    </style>
+</head>
+<body id="body">
+<p>
+
+    2. **Question:** Create a function `reverseString` that takes a string and returns it reversed.
+        ```js
+        function reverseString(str) { /* ... */ }
+        console.log(reverseString("hello")); // Output should be "olleh"
+        ```
+    
+    3. **Question:** Write a function `isPalindrome` that checks if a given string is a palindrome (reads the same backward as forward).
+        ```js
+        function isPalindrome(str) { /* ... */ }
+        console.log(isPalindrome("racecar")); // Output should be true
+        console.log(isPalindrome("hello"));   // Output should be false
+        ```
+
+
+
+5. Write a script to dynamically create a list of items (e.g., ul and li elements) and append it to the DOM. <br>
+<!-- i have to check this in chatgpt -->
+
+11. Implement a dropdown menu that appears when a button is clicked and disappears when clicking outside of it. <br>
+
+12. Write JavaScript to dynamically change the src attribute of an image when hovering over a link. <br>
+
+<!-- 8. **Question:** Write a function to change the `src` attribute of an `<img>` element.
+```html
+<img id="myImage" src="oldImage.jpg">
+``` -->
+
+<div id="myDiv" class="active">Click me!</div>
+
+<ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li id="itemToRemove">Remove me</li>
+    <li>Keep me</li>
+    </ul>
+
+    <div id="myDiv1">
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        </div>
+
+        <div id="set">Set data attribute</div>
+
+        <div id="container">
+            <p id="existingParagraph">Existing paragraph</p>
+            </div>
+
+</p>
+<div> <label for="height"> height: </label>
+    <h2 id="height">Height</h2>
+    <label for="width"> width: </label>
+    <h2 id="width">width</h2>
+</div>
+
+<button>ques1's button</button>
+
+<div><h2>ques2's div</h2></div>
+
+<div id="sol4"> ques4's div</div>
+
+<div >
+    <h1>ques5's sol</h1>
+    <ul id="sol5">
+        <li>hlo</li>
+    </ul>
+</div>
+
+
+<form >
+    <label for="username">username</label>
+    <input type="text" id="username" placeholder="username" autocomplete="off"><br>
+    <label for="password">password</label>
+    <input type="password" id="password">
+    <button type="submit">submit</button>
+    <div id="msg"></div>
+        </form>
+    
+<button type="button" id="sol7">sol7's ques <br> click me to change</button>
+
+<h1>10</h1>
+
+<h3 id="time">Time</h3>
+
+<div class="dropdown">
+    <button id="showbtn">dropdown</button>
+<ul class="ul">
+    <li>hlo</li>
+    <li>hello</li>
+    <li>halo</li>
+    <li>helo</li>
+    <li>hiii</li>
+</ul>
+</div>
+
+<!-- <a href="https://google.com">https://google.com</a> -->
+<div id="img">
+    https://png.pngtree.com/png-vector/20191126/ourmid/pngtree-image-of-cute-radish-vector-or-color-illustration-png-image_2040180.jpg
+</div>
+
+
+    <button id="select">select</button>
+<ul class="bgcolor" id="selectoption">
+    <li>red</li>
+    <li>yellow</li>
+    <li>pink</li>
+    <li>sky</li>
+    <li>green</li>
+</ul>
+<br>
+
+<a href="https://google.com" id="link">google</a>
+<br>
+
+<table id="sol15">
+    <button id="add">add one data</button>
+    <th>ques 15</th>
+    <tr>
+        <td>hiii</td>
+    </tr>
+    <tr>
+        <td>hii</td>
+    </tr>
+    <tr>
+        <td>hi</td>
+    </tr>
+
+</table>
+<br>
+<img src="/img.jpg" alt="this is an image" id="image">
+
+
+<button type="submit" id="sol17">sol17</button>
+<br>
+<button type="button" id="sol18" class="light">sol18</button>
+
+<p id="sol19">
+    ilisha was born in a small coastal village where the main livelihood was fishing, and the most prized catch was the ilisha fish, known for its exquisite taste. from a young age, ilisha was fascinated by the shimmering scales and swift movements of the ilisha fish in the water. every morning, ilisha would accompany her father to the bustling fish market, where the air was thick with the scent of fresh ilisha catches. as she grew older, ilisha learned the delicate art of preparing traditional dishes featuring the ilisha fish, a skill passed down through generations. the entire village recognized ilisha's talent, and soon, her ilisha recipes became famous, attracting visitors from far and wide who wanted to taste her renowned ilisha delicacies.
+</p>
+
+<p >press b to play sound</p>
+<p >press a to play sound</p>
+<audio src="audio.mp3.mpeg"></audio>
+
+<button type="button" id="double">double click to alert</button>
+
+
+    <script> 
+//que1
+let sol1=document.getElementsByTagName("button")[0];
+sol1.addEventListener("click", function btn() {
+    console.log("here i am a message")
+})
+// let sol1=document.getElementsByTagName("button")[0];
+// sol1.addEventListener("click", console.log("here i am a massage"))//this is incorrect bcz sec arg should be js function, here console will immediately run and nothing happend while clicking to btn
+
+//que2
+let a= document.getElementById("username");
+let b= document.getElementById("password");
+let c= document.getElementsByTagName("button")[1];
+let d= document.getElementById("msg");
+
+// Clear any previous error messages
+d.textContent = "";
+c.addEventListener("click", function btn() {
+    if(a.value.trim() ==="" || b.value.trim() === ""){
+        //we use value for input, fieldarea, select and other form controls
+        //and we can use textcontent for html elements like div span h1.
+        //here trim removes the white space and check the field is empty or not
+        // document.write("field is empty")
+        console.error("field is empty");
+        console.log("field is empty, both fields are required");
+        event.preventDefault();//prevent form submission
+        d.textContent="field is empty, both fields are required";
+    };
+});
+
+
+//que3
+let sol3=document.getElementsByTagName("h2")[0];
+sol3.addEventListener("mouseover", function btn() {
+    sol3.classList.add("color")
+})
+sol3.addEventListener("mouseout", function btn() {
+    sol3.classList.remove("color")
+})
+
+// que4
+let sol4= document.getElementById("sol4");
+sol4.addEventListener("click", function toggle(){
+    sol4.classList.toggle("toggle")
+})
+
+//que5
+let sol5= document.getElementById("sol5");
+let li= document.createElement("li");
+// let prmt=prompt("write something")
+li.innerHTML=
+"<li>hello</li>"+
+"<li>helloo</li>"+
+"<li>hellooo</li>"+
+"<li>helloooo</li>"
+// li.innerHTML="<li>prmt</li>"
+sol5.append(li)
+// sol5.append(prmt)
+
+//ques6
+sol5.addEventListener("click", function remove(e) {
+let elem = e.target;
+elem.remove();
+})
+
+let sol7= document.getElementById("sol7");
+let p= document.getElementsByTagName("p")[0];
+sol7.addEventListener("click", function change(){
+p.textContent="changed";
+// sol7.append(p)
+})
+
+//que8
+sol8= document.getElementsByTagName("h1")[1];
+let n=10;
+// setInterval(function () {sol8.textContent = n--}, 1000)
+
+function solution8(){
+    sol8.textContent = n--;
+    if(n>=0){
+        setTimeout(solution8, 1000);//calls after 1sec
+    }
+}
+// setTimeout(solution8, 1000)//start the counting
+
+//que9
+let sol9= document.getElementById("time")
+// let t = new Date();
+// let u=t.getMonth()+1  + " "+ t.getDate()+" " + t.getFullYear() + " "  + t.getHours() + " " + t.getMinutes() + " " + t.getSeconds();
+
+setInterval(function () {
+let t = new Date();
+let m=t.getMonth()+1
+let u= t.getHours() + " hrs. " + t.getMinutes() + " min.  " + t.getSeconds()+ " sec. " + m  + " months "+ t.getDate()+" date " +
+t.getFullYear() + " yrs. ";
+// sol9.textContent=u;
+// console.log(u);
+}, 1000)
+
+//que10 and ques33
+window.onscroll= function(e){
+// console.log("page is scrolled");
+// console.log(window.screenX, window.screenY);//this is mouse event
+// console.log(window.scrollX, window.scrollY);
+};
+
+
+//que11
+let sol11= document.getElementsByClassName("ul")[0];
+let btn= document.getElementById("showbtn");
+btn.addEventListener("click", function show(){
+    sol11.classList.add("show");
+});
+
+window.addEventListener("click", function(event){
+    if(!sol11.contains(event.target)){
+        sol11.classList.remove("show")
+    }
+});
+
+//que12
+let sol12= document.getElementById("img");
+sol12.addEventListener("mouseover", function(){
+    let newImageUrl = "img.jpg"; 
+    imageElement.src = newImageUrl; 
+});
+
+//que13
+let sol13=document.getElementById("selectoption");
+let selectbtn=document.getElementById("select");
+selectbtn.addEventListener("click", function select(){
+    sol13.classList.add("show");
+    sol13.classList.remove("bgcolor");
+})
+sol13.addEventListener("click", function background(e) {
+let elem = e.target;
+switch(elem.textContent){
+    case "red":
+        sol13.style.backgroundColor="red"; break;
+        case "sky":
+        sol13.style.backgroundColor="aqua"; break;
+        case "yellow":
+        sol13.style.backgroundColor="yellow"; break;
+        case "pink":
+        sol13.style.backgroundColor="pink"; break;
+        case "green":
+        sol13.style.backgroundColor="green"; break;
+        default:
+            sol13.style.backgroundColor="white"
+}
+});
+
+//ques14
+let sol14 = document.getElementById("link");
+sol14.addEventListener("click", function(e){
+    e.preventDefault();
+    console.log("prevented default method");
+});
+
+//ques15
+let sol15= document.getElementById("sol15");
+let addbtn= document.getElementById("add");
+addbtn.addEventListener("click", function(){
+    let a=     "<tr>        <td>hlo</td>    </tr>";
+    sol15.innerHTML+=a;
+});
+
+//ques16
+let sol16= document.getElementById("image");
+window.addEventListener("resize", function(){
+    sol16.style.width="30px";
+    sol16.style.height="30px";
+    console.log("resized");
+});
+
+//ques17
+let sol17=document.getElementById("sol17");
+sol17.addEventListener("click", function(){
+    //process or code of form submission goes here
+    console.log("form submitted");
+    sol17.disabled = true;//insteasdd of ==  we use = ,bcz == used for comparision.
+})
+
+//ques18
+let sol18= document.getElementById("sol18");
+let body= document.getElementById("body");
+sol18.addEventListener("click", function(){
+    sol18.classList.toggle("dark");
+    body.classList.toggle("body");
+});
+
+//ques19
+// let hlo= "hlo , i am ilisha jaiswal";
+let sol19= document.getElementById("sol19");
+let text= sol19.textContent;
+let ab= text.includes("ilisha");
+console.log(ab);
+sol19.addEventListener("click", function(){
+let abc= text.replaceAll("ilisha", "<span class='highlight'>ilisha</span>");
+sol19.innerHTML=abc;
+});
+
+//ques20
+let audio= document.getElementsByTagName("audio")[0];
+document.addEventListener("keydown", function(e){
+    if(e.code=== 'KeyB'){
+        audio.play();
+    }
+    else if(e.code==='KeyA'){
+        audio.pause();
+    }
+});
+
+//ques21
+let sol21= document.getElementById("double");
+sol21.addEventListener("dblclick", function(){
+    alert("hello world");
+});
+
+//que22
+let sol22= document.getElementById("myDiv");
+sol22.addEventListener("click", function(){
+    sol22.textContent='i am changed';
+});
+
+// ques23
+// let setInt= setInterval(function(){
+//     console.log("inteval");
+// }, 2000);
+
+//ques24
+let sol24= document.getElementById("myList");
+let newItem=document.createElement("li");
+newItem.innerHTML=    "<li>Item 0</li>"
+// sol24.prepend(newItem);
+sol24.append(newItem);
+
+//ques25
+let sol25= document.getElementById("itemToRemove");
+sol25.remove();
+
+//ques26
+let sol26=document.getElementById("myDiv1");
+// sol26.innerHTML=" ";
+//or we can also do this
+// let childNode=sol26.childNodes;
+// sol26.remove(childNode);
+
+//ques27
+let sol27= document.getElementById("set");
+sol27.setAttribute("data-info", "12345");
+
+//ques28
+let sol28=sol27.getAttribute("data-info");
+console.log(sol28);
+
+//ques29
+sol27.removeAttribute("data-info");
+
+//ques30
+// setTimeout(function(){
+//     alert("hello world");
+// }, 3000);
+
+//ques31
+// let sol31= setTimeout(function(){
+//     clearInterval(setInt);
+// }, 10000);
+
+//ques32
+let height= document.getElementById("height");
+let width= document.getElementById("width");
+window.addEventListener("resize", function(){
+    height.innerHTML= window.innerHeight;
+    width.innerHTML= window.innerWidth;
+    //or
+    console.log(window.innerHeight);
+    console.log(window.innerWidth);
+});
+
+//ques34
+let sol34= document.getElementsByTagName("li");
+for(i=0; i< sol34.length; i++){
+sol34[i].textContent="updated item";
+};
+
+//que35
+let sol35= document.getElementById("myDiv");
+console.log(sol35.hasAttribute("class"));
+
+//ques36
+let sol36= document.getElementById("myDiv1");
+sol36.insertAdjacentHTML("beforebegin", "<p>Paragraph new</p>")
+
+//ques37
+let sol37= document.getElementById("container");
+sol37.insertAdjacentHTML("beforebegin", "<p>New paragraph</p>")
+
+//ques38
+function sum(a,b,c,d,e){
+    return a+b+c+d+e
+}
+console.log(sum(1,2,47,45,23), "hello");
+
+//ques39
+function factorial(n){
+    let product= 1;
+    for(let i=1; i<=n; i++){
+        product*=i;
+    }
+    // console.log(product);
+    return product;
+}
+console.log(factorial(5), "hii");
+
+//ques39
+let arr1=[1,485,5,342,546,66];
+function findMax(arr){
+    let max= Math.max(...arr);
+    return max;
+}
+console.log(findMax(arr1), "hlo")//we should alway use spread operator while using math.max()
+
+//ques40
+function isEven(n){
+    if(n%2==0){
+        return true;
+    }
+    return false
+}
+console.log(isEven(101))
+
+// ques41
+function length(e){
+    let a= e.length;
+    return a;
+}
+console.log(length("hello"));
+
+
+
+    </script>
+</body>
+</html>
