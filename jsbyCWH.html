@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <button id="btn1">btn1</button>
+        <button id="btn2">btn2</button>
+        <button id="btn3">btn3</button>
+        <button id="btn4">btn4</button>
+
+
+Chapter 9 - Practice Set
+
+1 Write va program to load. In a a Javascript wcript file browser using Promises. Use then() to display van alert when the load is complete
+
+from Write the same program pregunte previous queston and async await Syntax
+
+4 Write a program using Promise. all() inside an Async fawril its results promises one to aurait 3 promises with the by one. Compare case where we await these
+
+Chapter 10- Practice Set
+
+1 Use va fer API from the internet & fead Your app with live data.
+
+2 Create a Note Saving app which stores your note to local Storage
+
+Repeat the last question & fetch the note which 3 Repeat thed
+
+4 Delete the rote in the previous question
+
+
+
+
+Chapter 11 - Practice Set
+
+1 Create a Javascript class to create a comples number. Create a constructor to set the real and the complex part
+
+2 Write a method to add two complex numbers in the above class
+
+3 Create a class Student from a class Human... Override a method & see changes
+
+y see if Student is an instance of Human using instanceof Reyword.
+
+Use getters & setters to set and get the real and imaginary parts of the complex number
+
+Chapter 12 - Practice Set
+
+1 Write a Javascript program to print the following after 2 second delay
+
+Hello World
+
+Write a JavaScript program to find average of numbers in Syntax on "array using spread
+
+3 Write va Javascript function which resolves a Promise after in seconds. The function takes n vas the parameter Use an LIFE to execute the functions with different values of n
+
+4 Write a Java Script. Simple interest calculator using
+    </p>
+
+
+    <script>
+//ch8-ques1
+document.getElementById("btn1").onclick=()=>{alert("btn1 clicked");}
+document.getElementById("btn2").onclick=()=>{alert("btn2 clicked")};
+document.getElementById("btn3").onclick=()=>{alert("btn3 clicked")};
+document.getElementById("btn4").onclick=()=>{alert("btn4 clicked")};
+
+//ques2
+async function getRes(){
+        try {
+            let api= await fetch("https://jsonplaceholder.typicode.com/posts/1");
+        let response= await api.json()
+        console.log(response)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+// setInterval( getRes, 5000);
+
+//ch9
+//ques1
+async function sol1(){
+    try {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                reject(10);
+            }, 3000);
+        })
+    } catch (error) {
+        console.log(error)
+    }
+}
+// console.log(sol1())
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

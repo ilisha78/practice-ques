@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+<!-- ques- not done -->
+Increment a value stored in local storage with the key "counter" by 1.
+<!-- let counter = localStorage.getItem("counter");
+counter = counter ? parseInt(counter) + 1 : 1;
+localStorage.setItem("counter", counter); -->
+
+
+<!-- Retrieve the value of a cookie named "user".
+function getCookie(name) {
+    let value = "; " + document.cookie;
+    let parts = value.split("; " + name + "=");
+    if (parts.length == 2) return parts.pop().split(";").shift();
+}
+console.log(getCookie("user"));
+function getCookie(name) {
+    let value = "; " + document.cookie;
+    let parts = value.split("; " + name + "=");
+    if (parts.length == 2) return parts.pop().split(";").shift();
+}
+if (getCookie("sessionID")) {
+    console.log("yes");
+} else {
+    console.log("no");
+}
+
+Check if a cookie named "visitedPages" exists, and if so, log its value.
+-->
+Retrieve the value of a cookie named "sessionID".
+
+        </p>
+
+        <script>
+//ques21
+let obj21=["apple", "banana", "orange"];
+obj21=JSON.stringify(obj21);
+sessionStorage.setItem("fruits", obj21);
+
+//qus22
+let sol22= JSON.parse(sessionStorage.getItem("fruits"));
+console.log(sol22);
+
+//ques23
+sessionStorage.clear();
+
+//ques24
+let da= new Date("28 june 2024");
+// let sg=da.getDate()+(30*24*60*60*1000);//this is not correct
+da.setTime(da.getTime() + (30*24*60*60*1000));
+let expires1 = "expires=" + da.toUTCString();
+let sol23=document.cookie=`visitedPages=home,about,contact; expires= ${expires1}`;
+// console.log(sol23)
+
+//ques25
+let sol25=document.cookie;
+let str=sol23.toString();
+if(str.includes("visitedPages")){
+    console.log(obj21);
+}
+
+// let cookies = document.cookie.split(';');
+// let visitedPagesCookie = cookies.find(cookie => cookie.trim().startsWith("visitedPages="));
+
+// if (visitedPagesCookie) {
+//     let str = visitedPagesCookie.split('=')[1].trim();
+//     if (str.includes("home,about,contact")) {
+//         let obj21 = JSON.parse(sessionStorage.getItem("fruits"));
+//         console.log(obj21);
+//     }
+// }
+
+
+ques1
+let tt=new Date("28 june 2024")
+let td=tt.getDate()+7
+
+let a= document.cookie=`user=john; expires= ${td}`;
+let date = new Date();
+date.setTime(date.getTime() + (7*24*60*60*1000));
+let expires = "expires=" + date.toUTCString();
+document.cookie = "userId=john;" + expires + ";path=/";
+// alert(a)
+// console.log(a)
+
+// ques3
+// document.cookie = "user=john; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+//ques4
+localStorage.setItem("age", 42);
+
+//ques5
+console.log(localStorage.getItem("age"));
+
+//ques6
+localStorage.removeItem("age")
+
+//ques7
+sessionStorage.setItem("score",100)
+
+//ques8
+console.log(sessionStorage.getItem("score"));
+
+//ques9
+sessionStorage.removeItem("score");
+
+//ques10
+// let d= new Date("27 june 2024 06:00:30")
+// let g= d.getHours()+1
+// // console.log(g)
+// document.cookie="sessionID=12345; expires="+g;
+// //gpt code
+// let date = new Date();
+// date.setTime(date.getTime() + (1*60*60*1000));
+// let expires = "expires=" + date.toUTCString();
+// document.cookie = "sessionID=12345;" + expires + ";path=/";
+
+//ques11
+let ab = document.cookie;
+console.log(ab);
+if(ab.toString().includes("sessionID")){
+    console.log("yes")
+}
+
+//ques12
+let val12=30;
+            let value12=JSON.stringify(val12);
+            let sol12= localStorage.setItem("counter", value12 );
+            val12++;
+
+//ques13
+window.addEventListener("storage", (e)=>{
+    console.log("old value: ", e.oldValue);
+        console.log("new value: ", e.newValue);
+    });
+
+//ques14
+sessionStorage.setItem("userID", "67890");
+
+//ques15
+if(sessionStorage.getItem("userID")=== null){
+console.log("no");
+}else{
+    console.log("yes");
+}
+
+//ques16
+localStorage.clear();
+
+//ques17
+sessionStorage.clear();
+
+let obj={
+    name: "Alice", 
+    age: 30
+}
+let obj2=JSON.stringify(obj);
+localStorage.setItem("userInfo", obj2);
+
+//ques18
+document.cookie="loginStatus=true; path=/";//expires when the browser closes.
+
+//ques20
+JSON.parse(localStorage.getItem("userInfo"));
+console.log(localStorage.getItem("userInfo"));
+
+
+
+// todo with localStorage
+// let val=prompt("enter your todo")
+// let value=JSON.stringify(val)
+// localStorage.setItem("note", value);
+
+        </script>
+</body>
+</html>

@@ -87,6 +87,14 @@ height: 100px;
 <img id="myImage" src="oldImage.jpg">
 ``` -->
 
+Question: Implement a function filterArray that takes an array and a callback function. The callback function should be used to filter the array elements. The function should return a new array containing only the elements that pass the callback function's test.
+
+### Pyramid of Doom
+
+8. **Question:** Demonstrate a "pyramid of doom" where each level performs an asynchronous file operation.
+    ```js
+    readFile('file1.txt', (err, data1) => { readFile('file2.txt', (err, data2) => { readFile('file3.txt', (err, data3) => { console.log(data1, data2, data3); }); }); });
+    ```
 <div id="myDiv" class="active">Click me!</div>
 
 <ul id="myList">
@@ -545,6 +553,448 @@ function length(e){
 }
 console.log(length("hello"));
 
+
+//ques42
+function fetchData(callback){
+    console.log("fetching your data");
+
+    setTimeout(()=>{
+        let data= {
+            name:"ilisha",
+            class:12,
+            rollno:31,
+            age:17
+        };
+        callback(data);
+    }, 2000);
+};
+
+fetchData(function(data){
+    console.log(data);
+});
+
+//ques43
+function doSomethingAsync(callback){
+    setTimeout(()=>{
+        let msg= "i am a callback funttion";
+        callback(msg);
+    }, 1000);
+}
+doSomethingAsync(function(hello){
+    console.log(hello, "done");
+});
+
+//ques44
+function processData(data, callback){
+let process= data*2;
+callback(process)
+
+}
+processData(5, function(result){
+    console.log(result, "is your result")
+})
+
+//ques45
+// function sum(a, b, callback) {
+//     let x = a + b;
+//     callback(x);
+// }
+
+// sum(2, 4, function(result) {
+//     console.log(result, "is your answer");
+// });
+
+//ques 46
+function farewell(name, callback){
+    let message= "good evening "+name;
+    callback(message);
+}
+farewell("ilisha", function(msg){
+    console.log(msg, "farewell msg");
+});
+
+//ques47
+function addNumbers(a,b,callback){
+    let x= a+b;
+    callback(x);
+}
+addNumbers(2,4, function(result){
+    console.log(result, "this is your ans.")
+});
+
+//ques48
+function multiplyNumbers(a,b,callback){
+    let x= a*b;
+    callback(x);
+}
+multiplyNumbers(2,4, function(result){
+    console.log(result, "ans of multiplication")
+})
+
+//ques49
+function capitalizeName(name, callback){
+    let a= name.toString();
+    let b= a.toUpperCase();
+    callback(b);
+}
+capitalizeName("ilisha", function(result){
+    console.log(result);
+})
+
+
+//ques50
+function reverseString(name, callback){
+    let a= name.toString();
+    let b= Array.from(a)
+    let c= b.reverse();
+
+    callback(c);
+}
+reverseString("bhumi", function(reverse){
+    console.log(reverse);
+});
+
+//ques51
+function fetchUser(callback){
+    setTimeout(()=>{
+    let data= "i am a data";
+    callback(data);
+    },1000)
+}
+fetchUser(function(fetch){
+    console.log(fetch, "i am data2");
+})
+
+//ques52
+function squareNumber(no , callback){
+    let sq= no*no;
+    callback(sq);
+}
+squareNumber(34, function(result){
+console.log(result, "is the squre of your no.");
+})
+
+//ques53
+function concatenateStrings(str1, str2, callback){
+    let str3= str1+str2;
+    callback(str3);
+}
+concatenateStrings("ilisha ", "mahi ", function(concate){
+    console.log(concate, "are girlss");
+})
+
+//ques54
+let arr=[1,34,45,232,2,56,78,454,4,98,67];
+function filterArray(array, callback){
+    let newArr=[];
+    for(let i=0; i<array.length; i++){
+        if(array[i]%2==0){
+            newArr.push(array[i]);
+        }
+    }
+    callback(newArr);
+}
+filterArray(arr, function(filter){
+    console.log(filter, "contains all no. is even");
+})
+
+//ques55
+// function findMax(array, callback){
+//     let a= Math.max(...array);
+//     callback(a);
+// }
+// let arr11=[1,34,45,232,2,56,78,454,4,98,67];
+// findMax(arr11, function(max){
+// console.log(max, "is the max. no in the array")
+// })
+
+//ques56
+function greet(name, callback){
+    let a="good evening "+name;
+    callback(a);
+}
+greet("bhumi", function(greeting){
+    console.log(greeting);
+})
+
+//ques57
+function fetchData2(url, callback){
+setTimeout(()=>{
+let a=url+" is your url";
+callback(a);
+},2000)
+}
+fetchData2("www.google.com", function(url){
+    console.log(url);
+})
+
+
+//ques 58
+function calculate(a,b,callback){
+    let x= a*b;
+    let y= a/b;
+    let z= a-b;
+    callback(x,y,z)
+}
+calculate(30,5,function(m, n, o){
+    console.log(m , n, o)
+})
+
+//ques59
+// function calculate(a,b, operation, callback){
+//     let result;
+//     switch(operation){
+//         case "add":
+//             result= a+b; break;
+//         case "minus":
+//             result= a-b; break;
+//         case "multiply":
+//             result= a*b; break;
+//         case "divide":
+//             result= a/b; break;
+//         default:
+//             result=null
+//     }
+//     callback(result);
+// }
+// calculate(30, 5, "divide", function(r){
+// console.log(r);
+// })
+
+//ques60
+function asyncTask(callback){
+    setTimeout(() => {
+        callback()
+    }, 1000);
+}
+asyncTask(()=>{
+    console.log("task1");
+    asyncTask(()=>{
+        console.log("task2");
+        asyncTask(()=>{
+            console.log("task3");
+        })
+    })
+})
+
+//ques61
+function readFile(filename, callback){
+    setTimeout(() => {
+        let file=filename;
+        callback(file);
+    }, 1000);
+}
+readFile("document", function(name){
+    console.log(name);
+})
+
+//ques62
+function  first(callback){
+    setTimeout(() => {
+        console.log("1st done");
+        callback();
+    }, 1000);
+}
+function  second(callback){
+    setTimeout(() => {
+        console.log("2nd done");
+        callback();
+    }, 1000);
+}function  third(callback){
+    setTimeout(() => {
+        console.log("3rd done");
+        callback();
+    }, 1000);
+}
+
+first(()=>{
+    second(()=>{
+        third(()=>{
+            console.log("all done");
+        })
+    })
+})
+
+//ques63
+function fetchUserData(callback){
+    setTimeout(()=>{
+        let userData= {id:1, name:"ilisha"}
+        console.log("fetchuserdata......." , userData)
+        callback(userData);
+    },1000)
+}
+function processData(userData, callback){
+    setTimeout(()=>{
+        let processData= {...userData, processed:true}
+        //The JavaScript spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object.
+        console.log("processdata......." , processData)
+        callback(processData);
+    },1000)
+}
+function saveData(processData , callback){
+    setTimeout(()=>{
+        console.log("saving data.......", processData)
+        //we should use , insead of +, bcz + use to concate string it converts object to string........but , treats each argument separately.
+        callback();
+    },1000)
+}
+
+fetchUserData((userData) => {
+    processData(userData, (processedData) => { 
+        saveData(processedData, () => { 
+            console.log("Data saved!"); 
+        }); 
+    }); 
+});
+
+//ques64
+function anyfunc(callback){
+    setTimeout(() => {
+        console.log("level one")
+        setTimeout(() => {
+            console.log("level two");
+            setTimeout(() => {
+                console.log("level three");
+                console.log("all done")
+            }, 1000);
+        }, 1000);
+    }, 1000);
+}
+anyfunc()
+
+//ques65
+function asyncOp1(callback){
+    setTimeout(() => {
+        console.log("op1");
+        callback();
+    }, 1000);
+}
+function asyncOp2(callback){
+            setTimeout(() => {
+            console.log("op2");
+            callback();
+            }, 1000);
+        }
+function asyncOp3(callback){
+            setTimeout(() => {
+                console.log("op3");
+                callback();
+            }, 1000);
+        }
+function asyncOp4(callback){
+            setTimeout(() => {
+                console.log("op4");
+                callback();
+            }, 1000);
+        }
+
+asyncOp1(() => { 
+    asyncOp2(() => { 
+        asyncOp3(() => { 
+            asyncOp4(() => { 
+                console.log("All operations done!"); 
+            }); 
+        }); 
+    }); 
+});
+
+//ques66
+setTimeout(() => { 
+    console.log(1)
+    setTimeout(() => { 
+        console.log(2)
+        setTimeout(() => { 
+            console.log(3)
+            setTimeout(() => { 
+                console.log(4)
+                console.log("Final operation completed!"); 
+            }, 1000); 
+        }, 1000); 
+    }, 1000); 
+}, 1000);
+
+//ques67
+function loginUser(user, pass, callback){
+setTimeout(() => {
+    let name= user;
+    console.log(`user ${name}`+ "loging in");
+    callback(name);
+}, 1000);
+}
+function fetchProfile( username, callback){
+setTimeout(() => {
+    let profile={
+        username: username,
+        bio:"simple bio"
+    }
+    console.log(` ${username}`, "'s profile is fetching");
+    callback(profile)
+}, 1000);
+}
+function updateSettings(profile, callback){
+setTimeout(() => {
+    console.log("updating the setting for your profile....", `${profile.username}`)
+    callback();
+}, 1000);
+}
+
+loginUser('ilisha', 'pass', (username) => {
+    fetchProfile(username, (profile) => { 
+        updateSettings(profile, () => { 
+            console.log("Settings updated!"); 
+        }); 
+    }); 
+});
+
+//ques68
+function readFile(filename, callback){
+    setTimeout(() => {
+        console.log("reading all files.....")
+        callback(null, filename)
+    }, 1000);
+}
+readFile('file1.txt', (err, data1) => {
+    readFile('file2.txt', (err, data2) => { 
+        readFile('file3.txt', (err, data3) => { 
+            console.log(data1, data2, data3); 
+        }); 
+    }); 
+});
+
+//ques69
+function step1(callback){
+setTimeout(() => {
+    console.log("setp1");
+    callback();
+}, 1000);
+}function step2(callback){
+setTimeout(() => {
+    console.log("setp2");
+    callback();
+}, 1000);
+}
+function step3(callback){
+setTimeout(() => {
+    console.log("setp3");
+    callback();
+}, 1000);
+}
+function step4(callback){
+setTimeout(() => {
+    console.log("setp4");
+    callback();
+}, 1000);
+}
+
+step1(()=>{
+    step2(()=>{
+        step3(()=>{
+            step4(()=>{
+                console.log("all done")
+            })
+        })
+    })
+})
 
 
     </script>

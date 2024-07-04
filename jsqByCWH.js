@@ -1,5 +1,5 @@
 let an = "hello";
-let b= 5;
+// let b= 5;
 // console.log(an+b)
 
 // console.log(typeof an)
@@ -24,7 +24,7 @@ let dictionary= {
 }
 // console.log(dictionary)
 
-let d= 20;
+// let d= 20;
 if(d>10 && d<20){
     // console.log("yes")
 }
@@ -308,13 +308,6 @@ guess= Number.parseInt(guess);
 <a href="https://instagram.com"><button>instagram</button></a>
 <a href="https://twitter.com"><button>twitter</button></a>
 
-<div>
-  <button id="google">google</button>
-  <button id="facebook">facebook</button>
-  <button id="instagram">instagram</button>
-  <button id="twitter">twitter</button>
-</div>
-
 <h2 class="bulb"> bulb</h2> */
 
 // setInterval(() => {
@@ -328,29 +321,37 @@ guess= Number.parseInt(guess);
 // })
 
 
-// let a=document.getElementById("google")
-// a.addEventListener("click", function(){
-//   window.location="https://google.com"
-//   window.focus()
-// })
+/* <div>
+  <button id="google">google</button>
+  <button id="facebook">facebook</button>
+  <button id="instagram">instagram</button>
+  <button id="twitter">twitter</button>
+</div> */
 
-// let b=document.getElementById("facebook")
-// b.addEventListener("click", function(){
-//   window.location="https://facebook.com"
-//   window.focus()
-// })
-// let c=document.getElementById("instagram")
-// c.addEventListener("click", function(){
-//   window.location="https://instagram.com"
-//   window.focus()
-// })
-// let d=document.getElementById("twitter")
-// d.addEventListener("click", function(){
-//   window.location="https://twitter.com"
-//   window.focus()
-// })
+let a=document.getElementById("google")
+a.addEventListener("click", function(){
+    window.location="https://google.com"
+    window.focus()
+})
+
+let b=document.getElementById("facebook")
+b.addEventListener("click", function(){
+    window.location="https://facebook.com"
+    window.focus()
+})
+let c=document.getElementById("instagram")
+c.addEventListener("click", function(){
+    window.location="https://instagram.com"
+    window.focus()
+})
+let d=document.getElementById("twitter")
+d.addEventListener("click", function(){
+    window.location="https://twitter.com"
+    window.focus()
+})
 
 
 // let btn1= document.getElementsByClassName("btn1")[0]
 // btn1.addEventListener(onclick, document.write("btn1"));
+
 
