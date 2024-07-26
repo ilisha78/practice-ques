@@ -1,4 +1,4 @@
-// https://www.notion.so/JS-questions-10c1c7a97b42441f8bcaccebd9128fa
+// https://www.notion.so/JS-questions-10c1c7a97b42441f8bcaccebd9128fa1
 //all ques is in the above link
 
 let a=7;
