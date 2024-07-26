@@ -1,3 +1,6 @@
+// https://www.notion.so/JS-questions-10c1c7a97b42441f8bcaccebd9128fa
+//all ques is in the above link
+
 let a=7;
 let b=8;
 // console.log(a+b)
